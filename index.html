@@ -1,56 +1,183 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rinaldo - Portfólio</title>
-    <link rel="stylesheet" href="estilo/style.css">
-    <script defer src="script.js"></script> <!-- Adicionamos o JavaScript para o menu -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rinaldo | Portfólio</title>
+
+    <link rel="stylesheet" href="estilos/style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 </head>
+
+
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Rinaldo Albuquerque</h1>
-        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre-mim.html">Sobre</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <a href="#inicio" class="logo">
+                <img src="imagens/logo-rinaldo.png" alt="Logo Rinaldo" />
+            </a>
+
+            <!-- Botão do menu hambúrguer -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre mim</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Seção de Apresentação -->
-    <section class="apresentacao">
-        
-        <div class="conteudo">
-            <h2>Bem-vindo ao meu Portfólio!</h2>
-            <p>Sou um desenvolvedor em transição de carreira, apaixonado por tecnologia e criação de sites. Aqui você encontrará meus projetos e formas de contato.</p>
-            <a href="projetos.html" class="btn">Ver Projetos</a>
+    <!-- Seção Hero (abaixo do header) -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay">
+            <div class="hero-box">
+                <img src="imagens/foto-perfil.jpg" alt="Rinaldo Cavalcanti" class="hero-img" />
+                <h1>Bem-vindo ao meu portfólio</h1>
+                <p>Sou Rinaldo, desenvolvedor web focado em criar experiências digitais modernas e eficientes.</p>
+                <a href="#sobre" class="btn-hero">Mais sobre mim</a>
+            </div>
         </div>
-        <div class="foto">
-            <img src="imagens/foto-perfil.jpg" alt="Foto de Rinaldo">
-        </div>
-    
     </section>
 
-       
-<script defer src="script.js"></script>
+    <!-- Seção Sobre mim -->
+    <section id="sobre" class="sobre">
+        <div class="container-sobre">
+            <div class="sobre-img">
+                <img src="imagens/perfil-ia.png" alt="Rinaldo Cavalcanti" />
+            </div>
 
+            <div class="sobre-conteudo">
+                <h2>Sobre mim</h2>
+                <p>
+                    Sou Rinaldo, desenvolvedor web apaixonado por tecnologia e inovação. Crio soluções digitais modernas
+                    com foco em desempenho, acessibilidade e experiência do usuário.
+                </p>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Rinaldo Albuquerque | Todos os direitos reservados.</p>
-    </footer>
+                <div class="redes-sociais">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Seção Projetos -->
+    <section id="projects" class="projects-section">
+        <h2>Meus Projetos</h2>
+        <div class="project-container">
+            <div class="project" data-title="Landing Page Curso de Inglês"
+                data-description="Página de vendas com foco em conversão para curso online de inglês."
+                data-image="imagens/curdo-inglês.jpg" data-tools="HTML,CSS,JavaScript"
+                data-link="https://coruscating-jalebi-ec8729.netlify.app/">
+                <img src="imagens/curdo-inglês.jpg" alt="Projeto Curso de Inglês">
+                <p>Curso de Inglês</p>
+            </div>
 
-    <script defer src="script.js"></script>
+            <div class="project" data-title="Mascote Android"
+                data-description="Artigo com ilustração e layout moderno sobre o mascote Android."
+                data-image="imagens/projeto-android.jpg" data-tools="HTML,CSS" data-link="https://rinaldoalbuquerque.github.io/android.html">
+                <img src="imagens/projeto-android.jpg" alt="Projeto Android">
+                <p>Mascote Android</p>
+            </div>
 
+            <div class="project" data-title="Cordel Encantado"
+                data-description="Página com visual de cordel estilizado sobre lendas brasileiras."
+                data-image="imagens/projeto-cordel.jpg" data-tools="HTML,CSS" data-link="https://rinaldoalbuquerque.github.io/projeto-cordel/">
+                <img src="imagens/projeto-cordel.jpg" alt="Projeto Cordel Encantado">
+                <p>Cordel Encantado</p>
+            </div>
+
+            <div class="project" data-title="Tela de Login"
+                data-description="Interface de login animada e responsiva com validação de formulário."
+                data-image="imagens/tela-login.jpg" data-tools="HTML,CSS,JavaScript"
+                data-link="https://rinaldoalbuquerque.github.io/projeto-login/">
+                <img src="imagens/tela-login.jpg" alt="Projeto Tela de Login">
+                <p>Tela de Login</p>
+            </div>
+
+            <div class="project" data-title="Hamburgueria Burgz"
+                data-description="Site completo e moderno para uma hamburgueria fictícia."
+                data-image="imagens/hamburgueria.jpg" data-tools="HTML,CSS,JavaScript"
+                data-link="https://rinaldoalbuquerque.github.io/hamburgueria-burgz/">
+                <img src="imagens/hamburgueria.jpg" alt="Projeto Hamburgueria">
+                <p>Hamburgueria Burgz</p>
+            </div>
+
+            <div class="project" data-title="Redes Sociais"
+                data-description="Protótipo de rede social com layout limpo e moderno."
+                data-image="imagens/projeto-midias.jpg" data-tools="HTML,CSS,JavaScript"
+                data-link=" https://rinaldoalbuquerque.github.io/projeto-social/">
+                <img src="imagens/projeto-midias.jpg" alt="Projeto Redes Sociais">
+                <p>Redes Sociais</p>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </span>
+                <img src="" alt="Imagem do Projeto">
+                <h2></h2>
+                <p></p>
+                <div class="tools"></div>
+                <a href="#" target="_blank" class="view-project-button">Ver Projeto</a>
+            </div>
+        </div>
+    </section>
+<!-- Seção Contato -->
+    <section id="contato" class="contato-section">
+        <div class="container">
+          <h2>Peça seu orçamento</h2>
+      
+          <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+            <input type="text" id="phone" name="phone" placeholder="Seu número" required>
+            <textarea id="message" name="message" placeholder="Escreva sua mensagem..." required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+      
+          <div class="social-links">
+            <h3>Minhas Redes Sociais</h3>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+              <img src="images/instagram-icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+              <img src="images/facebook-icon.png" alt="Facebook">
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" class="social-icon">
+              <img src="images/tiktok-icon.png" alt="TikTok">
+            </a>
+          </div>
+        </div>
+      </section>
+      <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  emailjs.init("your_user_id"); // Substitua "your_user_id" pelo seu ID de usuário.
+</script
+    <script src="script.js"></script>
 </body>
+
 </html>
